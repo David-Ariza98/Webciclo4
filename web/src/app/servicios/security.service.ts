@@ -9,6 +9,7 @@ import { UserModel } from '../modelo/user.model';
 export class SecurityService {
   url = "http://localhost:3000";
   sessionUserData = new BehaviorSubject<UserModel>(new UserModel());
+ 
   constructor(private http: HttpClient) { 
     this.verificarSesion();
   }
@@ -16,8 +17,8 @@ export class SecurityService {
   login(correo: string, clave: string): Observable<any> {
     //Hacemos la solicitud al servicio web de login pasandole usuario y clave
     return this.http.post<any>(`${this.url}/login`, {
-      usuario: correo,
-      password: clave
+      User: correo,
+      Password: clave
     }, {
       headers: new HttpHeaders({
  

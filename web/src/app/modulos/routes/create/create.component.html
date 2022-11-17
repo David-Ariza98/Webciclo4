@@ -1,1 +1,37 @@
-<p>create works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col s12 l4 offset-l4 m4">
+          <div class="card deep-purple lighten-3 z-depth-4">
+            <div class="card-content white-text">
+              <span class="card-title center-align"><b>Registrar ruta</b></span>
+            </div>
+          </div>
+        </div>  
+    </div>
+    <form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="store()">
+        <div class="row">
+            <div class="input-field col s6">
+              <input formControlName="origen" type="text" class="validate">
+              <label for="origen">Aeropuerto Origen</label>
+            </div>
+            <div class="input-field col s6">
+              <input formControlName="destino" type="text" class="validate">
+              <label for="destino">Aeropuerto Destino</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input formControlName="TiempoEstimado" type="text" class="validate">
+              <label for="TiempoEstimado">Tiempo estimado de la ruta</label>
+            </div>
+        </div>
+   
+      <div class="row center-align">
+        <button class="btn-small waves-effect waves-light deep-purple lighten-2" type="submit" name="action">Enviar        
+        <!-- <button [disabled]="!fgValidacion.valid" class="btn-small waves-effect waves-light deep-purple lighten-2" type="submit" name="action">Enviar -->
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </form>
+  </div>
+  

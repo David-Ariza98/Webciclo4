@@ -1,1 +1,68 @@
-<p>create works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col s12 l4 offset-l4 m4">
+          <div class="card deep-purple lighten-3 z-depth-4">
+            <div class="card-content white-text">
+              <span class="card-title center-align"><b>Registrar Aeropuerto</b></span>
+            </div>
+          </div>
+        </div>  
+    </div>
+    <form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="store()">
+        <div class="row">
+            <div class="input-field col s6">
+              <input formControlName="Nombre" type="text" class="validate">
+              <label for="Nombre">Nombre</label>
+            </div>
+            <div class="input-field col s6">
+              <input formControlName="Ciudad" type="text" class="validate">
+              <label for="Ciudad">Ciudad</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input formControlName="Pais" type="text" class="validate">
+              <label for="Pais">País</label>
+            </div>
+            <div class="input-field col s6">
+                <input formControlName="CoorX" type="text" class="validate">
+                <label for="CoorX">Coordenadas X</label>
+              </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input formControlName="CoorY" type="text" class="validate">
+              <label for="CoorY">Coordenadas Y</label>
+            </div>
+            <div class="input-field col s6">
+                <input formControlName="Siglas" type="text" class="validate">
+                <label for="Siglas">Siglas</label>
+              </div>
+          
+          <div class="row">
+            <div class="input-field col s12 l6 offset-l3">
+              <select class="form-control" formControlName="Tipo1" id="prueba">
+              <option value="" disabled selected>Seleccionar tipo de aeropuerto</option>
+              <option value="" disabled selected>Nacional</option>
+              <option value="" disabled selected>Internacional</option>
+              </select>
+              <label for="Tipo1">Tipo</label>
+            </div>
+            </div>
+            </div>
+          <div class="row">
+            <div class="input-field col s12 l6 offset-l3">
+              <input formControlName="Tipo" type="text" class="validate">
+              <label for="Tipo">Tipo</label>
+            </div>
+          </div>
+   
+      <div class="row center-align">
+        <button class="btn-small waves-effect waves-light deep-purple lighten-2" type="submit" name="action">Enviar        
+        <!-- <button [disabled]="!fgValidacion.valid" class="btn-small waves-effect waves-light deep-purple lighten-2" type="submit" name="action">Enviar -->
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </form>
+  </div>
+  

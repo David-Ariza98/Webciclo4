@@ -1,11 +1,11 @@
 export class flightModel{
     id?: String;
-    fechaInicio?: String;
-    horaInicio?: string;
-    fechaFin?: string;
-    horaFin?: string;
-    asinetosVendidos?: string;
-    nombrePiloto?: string;
-    ruta?: string;
+    FechaInicio?: String;
+    HoraInicio?: string;
+    FechaFin?: string;
+    HoraFin?: string;
+    Asientos?: string;
+    NombrePiloto?: string;
+    Ruta?: string;
   }
   

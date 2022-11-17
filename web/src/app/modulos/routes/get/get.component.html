@@ -1,1 +1,29 @@
-<p>get works!</p>
+<div class="container">
+    <br>
+    <a routerLink="/routes/create" class="btn-small waves-effect waves-light deep-purple lighten-3 z-depth-3"><i class="material-icons right">add_circle_outline</i><FONT SIZE="1">Crear</FONT></a>
+   
+    <table class="table responsive">
+      <thead>
+        <tr>
+            <th>Origen</th>
+            <th>Destino</th>
+            <th>Tiempo Estimado</th>
+            <th class="center">Acciones</th>
+        </tr>
+      </thead>
+   
+      <tbody>
+        <tr *ngFor="let p of listado">
+          <td>{{p.origen}}</td>
+          <td>{{p.destino}}</td>
+          <td>{{p.TiempoEstimado}}</td>
+          <td>
+            <div class="center">
+              <a routerLink="/routes/edit/{{p.id}}" class="btn-small green lighten-3"><FONT SIZE="1">Editar</FONT></a>
+              <button class="btn-small red lighten-2" (click)="delete(p.id)"><FONT SIZE="1">Eliminar</FONT></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>

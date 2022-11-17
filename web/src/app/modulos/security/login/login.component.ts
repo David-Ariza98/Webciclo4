@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
     clave: ['', [Validators.required]]
   });
 
-  constructor(private fb: FormBuilder, private securityService: SecurityService,
+  constructor(private fb: FormBuilder, 
+    private securityService: SecurityService,
     private router: Router) { }
 
   ngOnInit(): void {

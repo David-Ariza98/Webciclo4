@@ -1,1 +1,56 @@
-<p>create works!</p>
+<div class="container">
+  <div class="row">
+      <div class="col s12 l4 offset-l4 m4">
+        <div class="card deep-purple lighten-3 z-depth-4">
+          <div class="card-content white-text">
+            <span class="card-title center-align"><b>Registrar vuelo</b></span>
+          </div>
+        </div>
+      </div>  
+  </div>
+  <form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="store()">
+      <div class="row">
+          <div class="input-field col s6">
+            <input formControlName="FechaInicio" type="text" class="validate">
+            <label for="FechaInicio">Fecha de Salida</label>
+          </div>
+          <div class="input-field col s6">
+            <input formControlName="HoraInicio" type="text" class="validate">
+            <label for="HoraInicio">Hora de Salida</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input formControlName="FechaFin" type="text" class="validate">
+            <label for="FechaFin">Fecha de llegada</label>
+          </div>
+          <div class="input-field col s6">
+              <input formControlName="HoraFin" type="text" class="validate">
+              <label for="HoraFin">Hora estimada finalizar vuelo</label>
+            </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input formControlName="Asientos" type="text" class="validate">
+            <label for="Asientos">Asientos Vendidos</label>
+          </div>
+          <div class="input-field col s6">
+              <input formControlName="NombrePiloto" type="text" class="validate">
+              <label for="NombrePiloto">Nombre del Piloto</label>
+            </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 l6 offset-l3">
+            <input formControlName="Ruta" type="text" class="validate">
+            <label for="Ruta">Ruta</label>
+          </div>
+          </div>
+ 
+    <div class="row center-align">
+      <button class="btn-small waves-effect waves-light deep-purple lighten-2" type="submit" name="action">Enviar        
+      <!-- <button [disabled]="!fgValidacion.valid" class="btn-small waves-effect waves-light deep-purple lighten-2" type="submit" name="action">Enviar -->
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </form>
+</div>

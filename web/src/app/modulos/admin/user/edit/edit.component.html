@@ -1,1 +1,44 @@
-<p>edit works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col s12 l4 offset-l4 m4">
+          <div class="card deep-purple lighten-3 z-depth-4">
+            <div class="card-content white-text">
+              <span class="card-title center-align"><b>Editar Usuario</b></span>
+            </div>
+          </div>
+        </div>  
+    </div>
+   
+    <form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="edit()">
+      <input formControlName="id" type="hidden" class="validate">
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="Nombre" type="text" class="validate">
+          <label class="active" for="Nombre">Nombre</label>
+        </div>
+        <div class="input-field col s6">
+          <input formControlName="Apellido" type="text" class="validate">
+          <label class="active" for="Apellido">Apellidos</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="Numero" type="text" class="validate">
+          <label class="active" for="Numero">Telefono</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="Correo" type="email" class="validate">
+          <label class="active" for="Correo">Correo</label>
+          <span class="helper-text" data-error="Correo invalido" data-success="Correo valido"></span>
+        </div>
+      </div>
+   
+      <div class="row center-align">
+        <button class="btn-small waves-effect waves-light deep-purple lighten-2" type="submit" name="action">Enviar
+            <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </form>
+  </div>

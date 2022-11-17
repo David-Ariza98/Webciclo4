@@ -1,1 +1,37 @@
-<p>get works!</p>
+<div class="container">
+    <br>
+    <a routerLink="/airports/create" class="btn-small waves-effect waves-light deep-purple lighten-3 z-depth-3"><i class="material-icons right">add_circle_outline</i><FONT SIZE="1">Crear</FONT></a>
+   
+    <table class="table responsive">
+      <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Ciudad</th>
+            <th>Pais</th>
+            <th>CoorX</th>
+            <th>CoorY</th>
+            <th>Siglas</th>
+            <th>Tipo</th>
+            <th class="center">Acciones</th>
+        </tr>
+      </thead>
+   
+      <tbody>
+        <tr *ngFor="let p of listado">
+          <td>{{p.Nombre}}</td>
+          <td>{{p.Ciudad}}</td>
+          <td>{{p.Pais}}</td>
+          <td>{{p.CoorX}}</td>
+          <td>{{p.CoorY}}</td>
+          <td>{{p.Siglas}}</td>
+          <td>{{p.Tipo}}</td>
+          <td>
+            <div class="center">
+              <a routerLink="/airports/edit/{{p.id}}" class="btn-small green lighten-3"><FONT SIZE="1">Editar</FONT></a>
+              <button class="btn-small red lighten-2" (click)="delete(p.id)"><FONT SIZE="1">Eliminar</FONT></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
